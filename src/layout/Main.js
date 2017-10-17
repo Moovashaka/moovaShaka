@@ -1,12 +1,7 @@
 import React from 'react';
-import { ContactForm } from  '../components/contactForm_validation_attempt.js';
 
 export default class Main extends React.Component {
 
-  onSubmit = (fields) => {
-    this.setState( fields );
-    console.log(fields);
-  }
     render () {
       return (
 <div>
@@ -82,15 +77,15 @@ export default class Main extends React.Component {
         <div className="container-fluid">
             <div className="row no-gutter popup-gallery">
                 <div className="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/1.jpg" className="portfolio-box">
-                        <img src="img/portfolio/thumbnails/1.jpg" className="img-responsive" alt="" />
+                    <a href="https://www.thelifestylementor.co.uk" className="portfolio-box">
+                        <img src="img/portfolio/thumbnails/lifestyleMentorThumb.png" className="img-responsive" alt="" />
                         <div className="portfolio-box-caption">
                             <div className="portfolio-box-caption-content">
                                 <div className="project-category text-faded">
-                                    Category
+                                    Brochure Site
                                 </div>
                                 <div className="project-name">
-                                    Project Name
+                                    The LifeStyle Mentor
                                 </div>
                             </div>
                         </div>
@@ -205,13 +200,9 @@ export default class Main extends React.Component {
           <div className="container">
           <div className="row">
           <div className="col align-items-end contactForm">
-          <ContactForm onSubmit={fields => this.onSubmit(fields)}/>
-          <p>
-            {JSON.stringify(this.state.fields, null, 2)}
-          </p>
-          </div>
-          </div>
+        </div>
       </div>
+    </div>
         </section>
   </div>
     );
