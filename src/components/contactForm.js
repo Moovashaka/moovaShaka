@@ -1,87 +1,156 @@
 import React from 'react';
 
+
 export class ContactForm extends React.Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      inputName: '',
+      inputNameError: '',
+      inputEmail: '',
+      inputEmailError: '',
+      inputCompany: '',
+      select: 'other',
+      message: '',
+      formSent: '',
+    };
 
-
-
-    this.state = {  name: '',
-                    email: '',
-                    select: '',
-                    errMsg: ''
-     };
-
-
-    this.handleName = this.handleName.bind(this);
-    this.handleEmail = this.handleEmail.bind(this);
+    this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleSelect = this.handleSelect.bind(this);
-
 
   }
 
 
-  handleSelect(e) {
-    this.setState({ select: e.target.value });
+  handleChange = e => {
+      this.props.onChange({ [e.target.name]: e.target.value })
+      this.setState({ [e.target.name]: e.target.value });
   }
 
-  handleName(e) {
-      if ( !this.state.name.length > 2) {
-        this.state = { errMsg: "2 characters or more" };
-        this.setState({ name: this.state.errMsg });
+  validate = () => {
+    let isError = false;
+    const errors = {};
+    if (this.state.inputName.length < 2) {
+      isError = true;
+      errors.inputNameError = ('Name should be 2 or more letters');
+    }
+
+    if (!this.state.inputEmail.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)) {
+      isError = true;
+      errors.inputEmailError = ('Needs valid email address');
+    }
+
+    if (isError) {
+      this.setState(errors)
+      errors.formSent = ('Please check the form for errors');
+      };
+
+    return isError;
+  }
+
+  handleSubmit = e => {
+      e.preventDefault();
+      const err = this.validate();
+
+      if (!err) {
+        const formData = 'Name: ' + this.state.inputName + ' Email: '
+        + this.state.inputEmail + ' Company: ' + this.state.inputCompany
+        + ' Select: ' + this.state.select + ' Message: ' + this.state.message ;
+
+        console.log(formData);
+
+        const sent = this.setState({formSent: 'Thank you for your enquiry, we will be in touch as soon as possible'});
+      {/* Clear Form */}
+          this.setState({
+          inputName: '',
+          inputNameError: '',
+          inputEmail: '',
+          inputEmailError: '',
+          inputCompany: '',
+          select: '',
+          message: ''
+
+        });
+        this.props.onChange({
+        inputName: '',
+        inputNameError: '',
+        inputEmail: '',
+        inputEmailError: '',
+        inputCompany: '',
+        select: '',
+        message: ''
+
+        });
       }
-      let inputName = this.setState({ name: e.target.value });
-  }
-
-  handleEmail(e) {
-    this.setState({ email: e.target.value });
-  }
+    }
 
 
-  handleSubmit(e) {
-    alert('form submitted: ' + this.state.value);
-    e.preventDefault();
-  }
 
   render() {
+
     return (
       <div className="text-center">
-        <form onSubmit={this.handleSubmit}>
+        <form name="contactForm" onSubmit={ this.handleSubmit }>
           <div>
             <label>Name:  </label>
-            <input name="inputName" type="text" onChange={this.handleName} required/>
+            <input
+              value={this.state.inputName}
+              name="inputName"
+              type="text"
+              onChange={this.handleChange}
+              required />
           </div>
           <br />
-          <h2>{this.state.name}</h2>
+          <span>{this.state.inputNameError}</span>
           <br />
           <div>
             <label> email:</label>
-            <input name="email" type="text" onChange={this.handleEmail} required/>
-            <h2>{this.state.email}</h2>
+            <input
+              value={this.state.inputEmail}
+              name="inputEmail" type="text"
+              onChange={this.handleChange}
+              required />
+            <br />
+          </div>
+          <span>{this.state.inputEmailError}</span>
+          <br />
+          <div>
+            <label> Company:</label>
+            <input
+              value={this.state.inputCompany}
+              name="inputCompany" type="text"
+              onChange={this.handleChange}
+               />
             <br />
           </div>
           <div>
             <label>
-              <i>Talk to ME about:</i>
+              <i>Talk to me about:</i>
               <br />
               <br />
             </label>
           </div>
-          <select name="select" className="text-center" onChange={this.handleSelect}>
-            <option value="brochure">A brochure site</option>
+          <select value={this.state.select} name="select" className="text-center" onChange={this.handleChange}>
+            <option value="other">Something else</option>
+            <option value='Brochure'>A brochure site</option>
             <option value="e-commerce">An e-commerce site</option>
             <option value="content managed">Content-Managed site (like Wordpress)</option>
             <option value="modifying">Modifying an existing App/Site</option>
             <option value="custom">Custom React Components</option>
             <option value="traffic">Traffic generation</option>
-            <option value="other">Something else</option>
           </select>
           <br />
           <br />
-          <h2>{this.state.select}</h2>
-
+          <label> Message: </label>
+          <textarea type="text" value={this.state.message} name="message" onChange={this.handleChange} maxLength="200"></textarea>
+          <br />
+          <br />
+        <button id="submit" type="submit" name="dataSubmit" disabled={this.state.lockSubmit}>Submit</button>
+        <br />
+        <br />
+        <span>{this.state.formSent}</span>
+        <br />
+        <br />
         </form>
       </div>
     );

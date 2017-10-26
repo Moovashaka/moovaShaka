@@ -108,6 +108,21 @@ button[type="submit"] {
 
 }
 
+textarea {
+  border-radius: 5px;
+  display: inline;
+/*  font-size: 1.3em;*/
+  text-align: left;
+  /*position: absolute;*/
+  background: ;
+  left: ;
+  top: ;
+  width: 400px;
+  height: 150px;
+  padding: 2px ;
+  color: 333;
+}
+
 .leaveForm {
   background: #fff;
   padding: 4em 4em 2em;
