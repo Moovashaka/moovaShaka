@@ -53,13 +53,26 @@ export class ContactForm extends React.Component {
       const err = this.validate();
 
       if (!err) {
+        const encode = (data) => {
+          return Object.keys(data)
+          .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+          .join("&");
+        }
+        fetch("/", {
+          method: "POST",
+          headers: {"content-type": "application/x-www-form-urlencoded" },
+          body: encode({ "form-name": "contactForm", ...this.state })
+        })
+          .then(() => this.setState({formSent: 'Thank you for your enquiry, we will be in touch as soon as possible'}))
+          .catch(error => alert(error));
+
         const formData = 'Name: ' + this.state.inputName + ' Email: '
         + this.state.inputEmail + ' Company: ' + this.state.inputCompany
         + ' Select: ' + this.state.select + ' Message: ' + this.state.message ;
 
         console.log(formData);
 
-        const sent = this.setState({formSent: 'Thank you for your enquiry, we will be in touch as soon as possible'});
+
       {/* Clear Form */}
           this.setState({
           inputName: '',
@@ -90,8 +103,9 @@ export class ContactForm extends React.Component {
 
     return (
       <div className="text-center">
-        <form name="contactForm" onSubmit={ this.handleSubmit }>
+        <form name="contactForm" onSubmit={ this.handleSubmit } netlify>
           <div>
+            <input type="hidden" name="form-name" value="contactForm" />
             <label>Name:  </label>
             <input
               value={this.state.inputName}
