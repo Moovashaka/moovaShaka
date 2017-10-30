@@ -116,7 +116,7 @@ export default class Main extends React.Component {
                                     Category
                                 </div>
                                 <div className="project-name">
-                                    Project Name
+                                    Coming Soon
                                 </div>
                             </div>
                         </div>
@@ -131,7 +131,7 @@ export default class Main extends React.Component {
                                     Category
                                 </div>
                                 <div className="project-name">
-                                    Project Name
+                                  Coming Soon
                                 </div>
                             </div>
                         </div>
@@ -146,7 +146,7 @@ export default class Main extends React.Component {
                                     Category
                                 </div>
                                 <div className="project-name">
-                                    Project Name
+                                    Coming Soon
                                 </div>
                             </div>
                         </div>
@@ -161,7 +161,7 @@ export default class Main extends React.Component {
                                     Category
                                 </div>
                                 <div className="project-name">
-                                    Project Name
+                                    Coming Soon
                                 </div>
                             </div>
                         </div>
