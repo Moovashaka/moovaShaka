@@ -33,8 +33,7 @@
 
     <!-- Theme CSS -->
     <link href="css/creative.css" rel="stylesheet">
-    <!-- User CSS goes here -->
-    <link href="css/userstyles.css" rel="stylesheet">
+    <!-- Additional CSS goes here -->
     <link href="css/form.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file: // -->
@@ -47,6 +46,21 @@
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
+    <form name="contactForm" netlify netlify-honeypot="bot-field" hidden>
+      <input name="inputName" type="text">
+      <input name="inputEmail" type="email">
+      <input name="inputCompany" type="text">
+      <select name="select">
+        <option value="other">Something else</option>
+        <option value='Brochure'>A brochure site</option>
+        <option value="e-commerce">An e-commerce site</option>
+        <option value="content managed">Content-Managed site (like Wordpress)</option>
+        <option value="modifying">Modifying an existing App/Site</option>
+        <option value="custom">Custom React Components</option>
+        <option value="traffic">Traffic generation</option>
+      </select>
+      <textarea name="message"></textarea>
+    </form>
     <div id="root"></div>
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="js/creative.min.js"></script>
