@@ -66,13 +66,6 @@ export class ContactForm extends React.Component {
           .then(() => this.setState({formSent: 'Thank you for your enquiry, we will be in touch as soon as possible'}))
           .catch(error => alert(error));
 
-        const formData = 'Name: ' + this.state.inputName + ' Email: '
-        + this.state.inputEmail + ' Company: ' + this.state.inputCompany
-        + ' Select: ' + this.state.select + ' Message: ' + this.state.message ;
-
-        console.log(formData);
-
-
       {/* Clear Form */}
           this.setState({
           inputName: '',
@@ -94,6 +87,7 @@ export class ContactForm extends React.Component {
         message: ''
 
         });
+       const clearMessageTimer = setTimeout(() => { this.setState({ formSent: '' })}, 5000);
       }
     }
 
