@@ -5,7 +5,7 @@ export default class Footer extends React.Component {
     return (
 <div className="text-center">
 <hr />
- &copy;MoovaShaka 2017
+ <p>&copy;MoovaShaka {(new Date().getFullYear())}</p>
 <hr />
 </div>
       );
