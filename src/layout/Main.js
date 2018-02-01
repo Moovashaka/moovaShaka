@@ -93,8 +93,8 @@ export default class Main extends React.Component {
                     </a>
                 </div>
                 <div className="col-lg-4 col-sm-6">
-                    <a href="http://www.carrepairpreston.co.uk/" target="_blank" rel="noopener noreferrer" className="portfolio-box">
-                        <img src="img/portfolio/thumbnails/autoview.png" className="img-responsive" alt="" />
+                    <a href="https://autoview.netlify.com/" target="_blank" rel="noopener noreferrer" className="portfolio-box">
+                        <img src="img/portfolio/thumbnails/aviewth.png" className="img-responsive" alt="" />
                         <div className="portfolio-box-caption">
                             <div className="portfolio-box-caption-content">
                                 <div className="project-category text-faded">
@@ -108,60 +108,15 @@ export default class Main extends React.Component {
                     </a>
                 </div>
                 <div className="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/3.jpg" target="_blank" rel="noopener noreferrer" className="portfolio-box">
-                        <img src="img/portfolio/thumbnails/3.jpg" className="img-responsive" alt="" />
+                    <a href="http://www.ribblevalleytyreandautoservices.co.uk" target="_blank" rel="noopener noreferrer" className="portfolio-box">
+                        <img src="img/portfolio/thumbnails/rvtathumb.png" className="img-responsive" alt="" />
                         <div className="portfolio-box-caption">
                             <div className="portfolio-box-caption-content">
                                 <div className="project-category text-faded">
-                                    Category
+                                    Single Page WebApp
                                 </div>
                                 <div className="project-name">
-                                    Coming Soon
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div className="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/4.jpg"  target="_blank" rel="noopener noreferrer" className="portfolio-box">
-                        <img src="img/portfolio/thumbnails/4.jpg" className="img-responsive" alt="" />
-                        <div className="portfolio-box-caption">
-                            <div className="portfolio-box-caption-content">
-                                <div className="project-category text-faded">
-                                    Category
-                                </div>
-                                <div className="project-name">
-                                  Coming Soon
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div className="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/5.jpg" target="_blank" rel="noopener noreferrer" className="portfolio-box">
-                        <img src="img/portfolio/thumbnails/5.jpg" className="img-responsive" alt="" />
-                        <div className="portfolio-box-caption">
-                            <div className="portfolio-box-caption-content">
-                                <div className="project-category text-faded">
-                                    Category
-                                </div>
-                                <div className="project-name">
-                                    Coming Soon
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div className="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/6.jpg" target="_blank" rel="noopener noreferrer" className="portfolio-box">
-                        <img src="img/portfolio/thumbnails/6.jpg" className="img-responsive" alt="" />
-                        <div className="portfolio-box-caption">
-                            <div className="portfolio-box-caption-content">
-                                <div className="project-category text-faded">
-                                    Category
-                                </div>
-                                <div className="project-name">
-                                    Coming Soon
+                                    Ribble Valley Tyre and Auto Services
                                 </div>
                             </div>
                         </div>
@@ -169,7 +124,7 @@ export default class Main extends React.Component {
                 </div>
             </div>
         </div>
-    </section>
+      </section>
 
     <aside className="bg-dark">
         <div className="container text-center">
