@@ -132,8 +132,8 @@ export default class Main extends React.Component {
                 <h2>Free consultation at MoovaShaka</h2>
                 <hr />
                 <p>We believe in gathering a full understanding of our clients, their needs
-                and business ambitions. So send us your contact info and a convinient time to Talk,
-                pour a coffee and together we can turn your vision into reality. 
+                and business ambitions. Pass your contact info and a convinient time to Talk,
+                pour a coffee and together we can turn your vision into reality.
 
                 </p>
                 <a href="#contact" className="btn btn-default btn-xl sr-button">Talk to us Now!</a>
