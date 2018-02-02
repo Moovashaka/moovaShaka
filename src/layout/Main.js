@@ -46,7 +46,7 @@ export default class Main extends React.Component {
                     <div className="service-box">
                         <i className="fa fa-4x fa-diamond text-primary sr-icons"></i>
                         <h3>Bespoke Designs</h3>
-                        <p className="text-muted">Or modify what you already have - HTML5, CSS3, JavaScript &amp; PHP &amp; ReactJS specialities. </p>
+                        <p className="text-muted">Or modify what you already have - HTML5, CSS3, JavaScript, PHP &amp; ReactJS specialities. </p>
                     </div>
                 </div>
                 <div className="col-lg-3 col-md-6 text-center">
@@ -67,7 +67,7 @@ export default class Main extends React.Component {
                     <div className="service-box">
                         <i className="fa fa-4x fa-heart text-primary sr-icons"></i>
                         <h3>Made with Love</h3>
-                        <p className="text-muted">We approach our creations with passion and treat our clients with respect!</p>
+                        <p className="text-muted">We approach our creations with passion and treat our clients with respect</p>
                     </div>
                 </div>
             </div>
@@ -132,7 +132,7 @@ export default class Main extends React.Component {
                 <h2>Free consultation at MoovaShaka</h2>
                 <hr />
                 <p>We believe in gathering a full understanding of our clients, their needs
-                and business ambitions. Leave your contact info and a convinient time to Talk,
+                and business ambitions. Leave your contact info and a convenient time to talk,
                 pour a coffee and together we can turn your vision into reality.
 
                 </p>
