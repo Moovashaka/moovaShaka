@@ -129,13 +129,13 @@ export default class Main extends React.Component {
     <aside className="bg-dark">
         <div className="container text-center">
             <div className="call-to-action">
-                <h2>Free consultation at MoovaShaka</h2>
+                <h2>Free consultation with MoovaShaka</h2>
                 <hr />
                 <p>We believe in gathering a full understanding of our clients, their needs
                 and business ambitions. Leave your contact info and a convenient time to talk,
                 pour a coffee and together we can turn your vision into reality.
-
                 </p>
+                <img src="img/logobanner.png" className="img-responsive" alt="" />
                 <a href="#contact" className="page-scroll btn btn-default btn-xl sr-button">Talk to us Now!</a>
             </div>
         </div>
