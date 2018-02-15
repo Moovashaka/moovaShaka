@@ -151,7 +151,8 @@ export default class Main extends React.Component {
                 </div>
                 <div className="col-lg-4 col-lg-offset-2 text-center">
                     <i className="fa fa-phone fa-3x sr-contact"></i>
-                    <a href="tel:0203-0123-231">0203 0123 231</a>
+                    <br />
+                    <a href="tel:+44-203-0123-231">0203 0123 231</a>
                 </div>
                 <div className="col-lg-4 text-center">
                     <i className="fa fa-envelope-o fa-3x sr-contact"></i>
