@@ -151,11 +151,11 @@ export default class Main extends React.Component {
                 </div>
                 <div className="col-lg-4 col-lg-offset-2 text-center">
                     <i className="fa fa-phone fa-3x sr-contact"></i>
-                    <p>0333 345 6789</p>
+                    <p>0203 0123 231</p>
                 </div>
                 <div className="col-lg-4 text-center">
                     <i className="fa fa-envelope-o fa-3x sr-contact"></i>
-                    <p><a href="mailto:your-email@your-domain.com">feedback@moovashaka.co.uk</a></p>
+                    <p><a href="mailto:info@moovashaka.co.uk">feedback@moovashaka.co.uk</a></p>
                       </div>
             </div>
           </div> {/*Close container*/}
