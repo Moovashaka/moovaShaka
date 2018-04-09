@@ -1,6 +1,7 @@
 import React from 'react';
 import Blognav from './Blognav.js';
 import Footer from './Footer.js';
+import CMS from 'netlify-cms';
 
 export default class Blog extends React.Component {
 
