@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-export default class Nav extends React.Component {
+export default class Blognav extends React.Component {
   render() {
     return (
     <nav id="mainNav" className="navbar navbar-default navbar-fixed-top">
@@ -10,26 +11,23 @@ export default class Nav extends React.Component {
                 <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span className="sr-only">Toggle navigation</span> Menu <i className="fa fa-bars"></i>
                 </button>
-                <a className="navbar-brand page-scroll" href="#page-top">MoovaShaka</a>
+                <Link to="/">
+                <a className="navbar-brand" href="/">MoovaShaka</a>
+              </Link>
             </div>
 
             {/* Collect the nav links, forms, and other content for toggling */}
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul className="nav navbar-nav navbar-right">
                     <li>
-                        <a className="page-scroll" href="#about">About</a>
+                      <Link to="/">
+                        Home
+                      </Link>
                     </li>
                     <li>
-                        <a className="page-scroll" href="#services">Services</a>
-                    </li>
-                    <li>
-                        <a className="page-scroll" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li>
-                        <a className="page-scroll" href="#contact">Contact</a>
-                    </li>
-                    <li>
-                        <a className="page-scroll" href="/blog">Blog</a>
+                      <Link to="/blog">
+                        Blog
+                      </Link>
                     </li>
                 </ul>
             </div>

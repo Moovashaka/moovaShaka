@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import Nav from '../src/layout/Nav.js';
-import Main from '../src/layout/Main.js';
-import Footer from '../src/layout/Footer.js';
-import { ContactForm } from  './components/contactForm.js';
+import Layout from '../src/layout/Layout.js';
+import Blog from '../src/layout/Blog.js';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 class App extends Component {
   state = {
@@ -16,10 +15,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-            < Nav />
-              < Main />
-              <ContactForm  onChange={fields => this.onChange(fields)} />
-                < Footer />
+          <Router>
+            <div>
+            <Route exact path="/" component={Layout} />
+            <Route exact path="/blog" component={ Blog } />
+            </div>
+          </Router>
       </div>
     );
   }

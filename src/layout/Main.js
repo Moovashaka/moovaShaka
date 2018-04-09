@@ -1,7 +1,15 @@
 import React from 'react';
+import { ContactForm } from  '../components/contactForm.js';
 
 export default class Main extends React.Component {
-
+  state = {
+    fields: {}
+  };
+  onChange = updatedValue => {
+    this.setState({  fields: {
+      ...this.state.fields,
+      ...updatedValue }});
+  }
     render () {
       return (
 <div>
@@ -152,7 +160,7 @@ export default class Main extends React.Component {
                 <div className="col-lg-4 col-lg-offset-2 text-center">
                     <i className="fa fa-phone fa-3x sr-contact"></i>
                     <br />
-                    <a href="tel:+44-203-0123-231">0203 0123 231</a>
+                    <a href="tel:+44-203-0123-231">+44 (203) 0123 231</a>
                 </div>
                 <div className="col-lg-4 text-center">
                     <i className="fa fa-envelope-o fa-3x sr-contact"></i>
@@ -167,6 +175,7 @@ export default class Main extends React.Component {
       </div>
     </div>
         </section>
+        < ContactForm onChange={fields => this.onChange(fields)} />
   </div>
     );
   }
