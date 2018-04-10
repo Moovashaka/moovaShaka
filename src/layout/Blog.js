@@ -4,6 +4,7 @@ import Footer from './Footer.js';
 import CMS from 'netlify-cms';
 
 
+
 export default class Blog extends React.Component {
 
   render() {

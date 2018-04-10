@@ -25,7 +25,7 @@ export default class Blognav extends React.Component {
                       </Link>
                     </li>
                     <li>
-                      <Link to="/admin">
+                      <Link to="/admin/#">
                         Admin
                       </Link>
                     </li>
