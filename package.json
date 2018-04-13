@@ -4,8 +4,6 @@
   "private": true,
   "dependencies": {
     "classnames": "^2.2.5",
-    "formsy-react": "^0.19.5",
-    "formsy-react-es6": "^1.0.5",
     "netlify-cms": "^1.4.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",

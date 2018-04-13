@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import Layout from '../src/layout/Layout.js';
-import Blog from '../src/layout/Blog.js';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import Home from './scenes/Home';
+import Admin from './scenes/Admin';
+import Writings from './scenes/Writings';
+import Settings from './scenes/Settings';
 
 class App extends Component {
   state = {
@@ -17,13 +20,17 @@ class App extends Component {
       <Router>
       <div className="App">
 
-            <div>
-            <Route exact path="/" component={Layout} />
-            <Route exact path="/blog" component={ Blog } />
-            <Route exact strict path="/admin" redirect to="/public/admin/#/" />
-            </div>
 
-      </div>
+      <Switch>
+         <Route path="/" exact component={Layout} />
+         <Route path="/blog/" exact component={Home} />
+         <Route path="/home/" exact component={Home} />
+         <Route path="/admin/" exact component={Admin} />
+         <Route path="/admin/writings/" exact component={Writings} />
+         <Route path="/admin/settings/" exact component={Settings} />
+      </Switch>
+
+    </div>
     </Router>
     );
   }
