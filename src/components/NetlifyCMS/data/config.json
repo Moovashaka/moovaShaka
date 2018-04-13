@@ -4,7 +4,7 @@
     "repo": "Moovashaka/moovaShaka",
     "branch": "cmsAdd"
   },
-  "display_url": "/home",
+  "display_url": "/blog",
   "media_folder": "public/img/uploads",
   "public_folder": "/img/uploads",
   "collections": [
